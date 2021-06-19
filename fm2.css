@@ -1,0 +1,189 @@
+body {
+    background: rgb(211 210 207 / 87%);;
+    text-align: center;
+  }
+  
+  .card {
+    background: rgb(255, 244, 244);
+    border-radius: 2px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    color:rgb(0, 0, 0);
+    margin-bottom: 10px;
+  }
+  
+  .card-1 {
+      background:  #ff2d2d;
+    box-shadow:  9px 10px 6px rgba(0,0,0,0.16),   9px 10px 6px rgba(0,0,0,0.23);
+  }
+  
+  
+  
+  .card-2 {
+    box-shadow:  9px 10px 6px rgba(0,0,0,0.16),  9px 10px 6px rgba(0,0,0,0.23);
+  }
+  
+  .card-3 {
+      background:#ff2d2d;
+    box-shadow:  9px 10px 6px rgba(0,0,0,0.16),  9px 10px 6px rgba(0,0,0,0.23);
+  }
+  
+  .card-4 {
+    box-shadow:  9px 10px 6px rgba(0,0,0,0.16),  9px 10px 6px rgba(0,0,0,0.23);
+  }
+  
+  .card-5 {
+  background: yellow;
+  color: #ff2d2d;
+    box-shadow:  9px 10px 6px rgba(0,0,0,0.16),  9px 10px 6px rgba(0,0,0,0.23);
+  }
+
+  .card-6{
+    box-shadow:  9px 10px 6px rgba(0,0,0,0.16),  9px 10px 6px rgba(0,0,0,0.23);
+  }
+  
+  .sub-menu-parent { position: relative; }
+  
+  .sub-menu { 
+    visibility: hidden; /* hides sub-menu */
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  }
+  
+  .sub-menu-parent:focus .sub-menu,
+  .sub-menu-parent:focus-within .sub-menu,
+  .sub-menu-parent:hover .sub-menu {
+    visibility: visible; /* shows sub-menu */
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+  }
+  
+  /* presentational */
+  body { padding: 2%; font: 18px/1.4 sans-serif; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+  
+  nav a { color: rgb(17, 17, 17); display: block; padding: 0.5em 1em; text-decoration: none; width: 200px;}
+  nav a:hover { color: rgb(82, 81, 81);
+                background-color: orange;
+              }
+  nav ul,
+  nav ul li { list-style-type: none; padding: 0; margin: 0; }
+  
+  nav > ul { background:  rgb(76 74 68 / 56%); text-align: center; }
+  nav > ul > li { display: inline-block; border-left: solid 1px rgb(90, 89, 89); }
+  nav > ul > li:first-child { border-left: none; }
+  
+  .sub-menu {
+    background: #FFF;
+  }
+  .trigger {
+    type=["checkbox"] {
+      
+      // Hide content via default
+      & + span {
+        visibility: hidden;
+        opacity: 0;
+      
+        transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+      }
+      
+      // Show if checkbox is clicked
+      &:checked + span {
+        visibility: visible;
+        opacity: 1;
+        
+        transition-delay: 0s;
+      }
+    }
+  }
+  
+  // Simple styling for message.
+  .msg {
+    display: block;
+    margin-top: 8px;
+    padding: 8px 12px;
+    
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  $color1: #f4f4f4;
+  $color2: #3197EE;
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .radio {
+    margin: 0.5rem;
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      + .radio-label {
+        &:before {
+          content: '';
+          background: $color1;
+          border-radius: 100%;
+          border: 1px solid darken($color1, 25%);
+          display: inline-block;
+          width: 1.4em;
+          height: 1.4em;
+          position: relative;
+          top: -0.2em;
+          margin-right: 1em; 
+          vertical-align: top;
+          cursor: pointer;
+          transition: all 250ms ease;
+        }
+      }
+      &:checked {
+        + .radio-label {
+          &:before {
+            background-color: $color2;
+            box-shadow: inset 0 0 0 4px $color1;
+          }
+        }
+      }
+      &:focus {
+        + .radio-label {
+          &:before {
+            outline: none;
+            border-color: $color2;
+          }
+        }
+      }
+      &:disabled {
+        + .radio-label {
+          &:before {
+            box-shadow: inset 0 0 0 4px $color1;
+            border-color: darken($color1, 25%);
+            background: darken($color1, 25%);
+          }
+        }
+      }
+      + .radio-label {
+        &:empty {
+          &:before {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .redBox{
+    height: 20px;
+    width: 22px;
+    margin-left: -28px;
+    margin-bottom: -5px;
+
+  }
+  

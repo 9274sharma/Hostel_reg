@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Registration</title>
+    <link rel="stylesheet" href="roomstyle.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+<body id="abc">
+    <div class="logo">
+        <img src="logo.png">
+    </div>
+    <nav>
+        <ul>
+            <li class="na a">.</li>
+            <li class="na"><i class="fas fa-home"></i><a href="dashboard.html" class="active">  Home</a></li>
+            <li class="na"><i class="fab fa-wpforms"></i><a href="#">  Hostel registration</a></li>
+            <li class="na"><i class="fas fa-bell"></i><a href="#">  Notification center</a></li>
+            <li class="na"><i class="fas fa-info-circle"></i><a href="#">  Academic detail</a></li>
+            <li class="na"><i class="fas fa-project-diagram"></i><a href="#">  Project Record</a></li>
+            <li class="na"><i class="fas fa-calendar-week"></i><a href="#">  Time table</a></li>
+            <li>
+                <div class="dropdown na b">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="dropbtn"><i class="fas fa-bars"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Contact Us</a>
+                        <a href="#">Email Us</a>
+                        <a href="index.php">Logout</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav><br>
+    <div id="printContent">
+         
+    <form>
+    <h1>ROOM SELECTION</h1>
+    <div class="wholeBox">
+    <div class="dayndate">
+        <form action="">
+            <strong>arrival date</strong> <input type="date">
+        </form>    
+    </div>
+    <div class="hostel">
+        <form action="">
+            <strong>Hostel:-</strong> 
+        <strong>Boy</strong><input type="checkbox" name="boy" value="Boy">
+        <strong>Girl</strong><input type="checkbox" name="girl" value="Girl">
+        </form>
+    </div>
+
+    
+<div class="container"> 
+<!---- LINK OF ROOM SELECTION WEB-PAGE----->
+<iframe src="fm2.html" height="800px" width="700px"></iframe>
+
+</div>
+</div>
+
+<div class="caution">
+    <p>
+        <h3>*caution*</h3><br>
+        <ul class="cau"><em><bold>
+            <li>If you don't report within three days of reporting given by you, your room reservation will be cancelled automatically.</li>
+            <li>you will be quarantined for 7 days after reporting and in that period you are not allowed to leave your room untill the room co-ordinator allows you.</li>
+            <li>all the other information and rules and regulations are provided here:- <div class="link"><a href="https://jaipur.manipal.edu/muj/life-at-muj/hostel-facility/hostel-fees.html">HOSTEL-FEE</a><br>
+                <a href="https://jaipur.manipal.edu/muj/life-at-muj/hostel-facility.html">HOSTEL-FACILITY</a><br>
+                <a href="https://jaipur.manipal.edu/muj/life-at-muj/hostel-facility/hostel-rules-and-regulations.html">RULESnREGULATION</a><br>
+                <a href="https://jaipur.manipal.edu/muj/life-at-muj/hostel-facility/rooms-and-facilities.html">ROOM-FACILITIES</a><br>
+                <a href="https://jaipur.manipal.edu/muj/life-at-muj/hostel-facility/Mess-fees.html">MESS-FEE</a><br></div></li> 
+        
+        </bold></em></ul>
+    </p>
+</div>
+<!--<div class="btn">
+    <button>submit</button>
+</div>-->
+</div>
+<div class="btn">
+<input type="button" onclick="printDiv('printContent')"value="SUBMIT"/></div>
+</form>
+
+    
+      
+     
+<div class="footer p10">
+    "©2017 Manipal University, jaipur.manipal.edu, Dehmi Kalan,
+     Near GVK Toll Plaza, Jaipur-Ajmer Expressway, Jaipur, Rajasthan
+     303007."
+</div>   
+<script>
+    function printDiv(){
+      //  var element = document.getElementById('printContent');
+        //console.log(element);
+        //html2pdf(element).save();
+        window.print();
+    }
+
+    //var element = document.getElementById('printContent');
+      //  console.log(element)
+        //html2pdf(element).save();
+    
+     
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="fm2.css">
+</head>
+<body>
+<nav>
+   <ul>
+     <li class="sub-menu-parent" tab-index="0">
+       <a href="#">Floors</a>
+       <ul class="sub-menu">
+         <li onclick = "groundFloor()"><a href="#">Ground Floor</a></li>
+         <li onclick = "firstFloor()"><a href="#">First Floor </a></li>
+         <li onclick = "secondFloor()"><a href="#">Second Floor</a></li>
+       </ul>
+     </li>
+
+   </ul>
+ </nav>
+ <br/>
+ <div class="container">
+  <div class="radio">
+    <input id="radio-1" name="radio" type="radio" checked onclick="singleOccupancy()">
+    <label for="radio-1" class="radio-label">Single Occupancy</label>
+  </div>
+
+  <div class="radio">
+    <input id="radio-2" name="radio" type="radio" onclick="doubleOccupancy()">
+    <label  for="radio-2" class="radio-label">Double Occupancy</label>
+  </div>
+
+</div>
+
+ <p></p>
+
+<div id="box1" class="card card-1" ><p>R1</p></div>
+<div id="box2" class="card card-2" onmouseover="floor1()"><p>R2</p></div>
+<div id="box3" class="card card-3"><p>R3</p></div><br>
+<div id="box4" class="card card-4" onmouseover="floor2()"><p>R4</p></div>
+<div id="box5" class="card card-5"><p>STAIRS</p></div>
+<div id="box6" class="card card-6" onmouseover="floor3()"><p>R5</p></div>
+
+<p>
+<div class="alert alert-success" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <img class="redBox" src="red.png" alt=""> This room is already reseverd!
+</div>
+<div>
+ <!-- <input id="payment" type="text"  checked onclick="singleOccupancy()">
+  <label for="payment">Rs 1,00,000</label>
+</div>
+<div>
+  <input id="payment1" type="text"  checked onclick=" doubleOccupancy()">
+  <label for="payment1">Rs 60,000</label>
+</div>-->
+<div>
+  <p>For single Occupancy:- Rs 1,00,000</p>
+  <p>For double Occupancy:- Rs 50,000</p>
+</div>
+
+
+<script>
+var i = 0;
+
+function floor1() {
+  document.getElementById("box2").style.background = "#97E620";
+  document.getElementById("box4").style.background = "grey";
+    document.getElementById("box6").style.background = "grey";
+   if(i == 1){
+        document.getElementById("box2").style.background = "blue";
+    }
+        
+}
+
+function floor2() {
+  document.getElementById("box2").style.background = "grey";
+  document.getElementById("box4").style.background = "#97E620";
+    document.getElementById("box6").style.background = "grey";
+       if(i == 1){
+        document.getElementById("box2").style.background = "blue";
+    }
+        
+}
+function floor3() {
+  document.getElementById("box2").style.background = "grey";
+  document.getElementById("box4").style.background = "grey";
+    document.getElementById("box6").style.background = "#97E620";
+       if(i == 1){
+        document.getElementById("box2").style.background = "blue";
+    }
+        
+}
+function groundFloor() {
+    document.getElementById("box1").innerHTML = "<p>G1<p>";
+    document.getElementById("box2").innerHTML = "<p>G2<p>";
+    document.getElementById("box3").innerHTML = "<p>G3<p>";
+    document.getElementById("box4").innerHTML = "<p>G4<p>";
+    document.getElementById("box6").innerHTML = "<p>G5<p>";
+        
+}
+function firstFloor() {
+    document.getElementById("box1").innerHTML = "<p>F1<p>";
+    document.getElementById("box2").innerHTML = "<p>F2<p>";
+    document.getElementById("box3").innerHTML = "<p>F3<p>";
+    document.getElementById("box4").innerHTML = "<p>F4<p>";
+    document.getElementById("box6").innerHTML = "<p>F5<p>";
+        
+}
+function secondFloor() {
+    document.getElementById("box1").innerHTML = "<p>S1<p>";
+    document.getElementById("box2").innerHTML = "<p>S2<p>";
+    document.getElementById("box3").innerHTML = "<p>S3<p>";
+    document.getElementById("box4").innerHTML = "<p>S4<p>";
+    document.getElementById("box6").innerHTML = "<p>S5<p>";
+        
+}
+function doubleOccupancy() {
+	i = 1;
+    document.getElementById("box2").innerHTML = "<p>Yash Sharma<br>900900900<br>CSE 209300000<p>Room Mate<p></p>";
+
+    document.getElementById("box2").style.background = "#3375e8";
+        
+}
+function singleOccupancy() {
+	i = 0;
+    document.getElementById("box1").innerHTML = "<p>R1<p>";
+    document.getElementById("box2").innerHTML = "<p>R2<p>";
+    document.getElementById("box3").innerHTML = "<p>R3<p>";
+    document.getElementById("box4").innerHTML = "<p>R4<p>";
+    document.getElementById("box6").innerHTML = "<p>R5<p>";
+    document.getElementById("box2").style.background = "grey";
+        
+}
+</script>
+
+</body>
+</html> 

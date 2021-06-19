@@ -1,0 +1,14 @@
+<!-- database Connection -->
+
+<?php 
+$conn = new mysqli('localhost','root','','hostel');
+
+
+if($conn->connect_error){
+	die("Connection failed: ".$conn->connect_error);
+}else{
+}
+
+ ?>
+
+<!-- database connection close -->
